@@ -1,10 +1,17 @@
-# Title (replace with your title)
+# Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+An introduction to what  Regex is and how they work
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+A Regex (Regular Expression) is a string of text that can be used to create search patterns that locate, match and manage text. Here is an example code snippet of regex:
+ ```
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+ ```
+
+* This Regex is used to match an e-mail address
+
+A Regex can be used from the command line and text editors as well to locate text residing in a file.
 
 ## Table of Contents
 
