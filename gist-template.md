@@ -122,6 +122,18 @@ Examples of Character Classes:
 
 ### The OR Operator
 
+OR Operators, or alternation operator, matches the choice of a regular expression: if you put the character(s) representing the alternation operator between any two characters in the regular expression, the result matches the union of the strings that those two characters match.
+
+Examples of OR Operators:
+
+* `(|)` - matches a string that has any anterior characters followed by the characters on the left or right of the vertical bar
+* `[]` - matches a string that has any anterior characters without any characters within the brackets
+* Examples: 
+```
+a(b|c)  matches a string that has a followed by b or c (and captures b or c)
+a[bc]   matches a string that has a, but without capturing b or c
+```
+
 ### Flags
 
 Flags are optional parameters that a user can add to a standard expression to make it search in a different way. Each flag is denoted by a single alphabetical character, and serves different purposes in modifying the expression's searching behavior.
