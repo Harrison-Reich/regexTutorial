@@ -54,6 +54,7 @@ Examples of Quantifiers:
 * `{}` -  matches a string that has the anterior followed by how ever many the number in the brackets of the last character in the string
 * `()*` - matches a string that has any anterior characters followed by zero or more copies of the string within the brackets
 * Examples:
+
 ```
 xyz*        matches a string that has xy followed by zero or more z
 xyz+        matches a string that has xy followed by one or more z
@@ -66,6 +67,19 @@ x(yz){3,6}  matches a string that has a followed by 3 up to 6 copies of the sequ
 ```
 
 ### Grouping Constructs
+
+Grouping unifies a pattern or string so that it is matched in a complete block
+
+Examples of Grouping are as follows:
+* `()` - parentheses creates a capture group
+* `(?:)` - using `?:` disables the capturing group
+* `(?<>)` - using `?<>` puts a name to the group
+* Examples:
+```
+x(yz)           parentheses create a capturing group with value yz
+x(?:yz)*        using ?: we disable the capturing group
+x(?<end>yz)     using ?<end> we put a name to the group
+```
 
 ### Bracket Expressions
 
