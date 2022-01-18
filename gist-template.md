@@ -85,7 +85,8 @@ x(?<end>yz)     using ?<end> we put a name to the group
 Bracket Expressions are characters enclosed by a bracket `[]` matching any single character within the brackets. 
 *note*: if the first character within the brackets is a `^` then it signifies any character *not* in the list, and is unspecified whether it matches an encoding error. 
 
-Examples of Bracket Expressions: 
+Examples of Bracket Expressions:
+ 
 * `[]` - matching any single character within the brackets
 * `[]%` - matching the string inside the brackets before the `%`
 * `[^]` - matching any string that has not a letter from within the brackets (negation of expression)
@@ -139,6 +140,7 @@ x[yz]   matches a string that has 'x', but without capturing 'y' or 'z'
 Flags are optional parameters that a user can add to a standard expression to make it search in a different way. Each flag is denoted by a single alphabetical character, and serves different purposes in modifying the expression's searching behavior.
 
 Examples of Flags:
+
 * `g` - Global, does not return after the first match, which restarted any previous searches from the end of the previous match (Makes the expression search for all occurrences)
 * `m` - Multi-line, when enabled with the Anchors ^ $ will match the start and end of a line, rather than the whole string
 * `i` - Insensitive, will make the entire expression case-insensitive
@@ -148,7 +150,6 @@ Examples of Flags:
 /Hello/m   matches the beginning and ending of each line with `Hello`, rather than the whole string `Hello` itself
 /Hello/i   matches all `hello` despite case (Hello, hEllo, heLlo, hellO, hello, HELLO all match)
 ```
-
 ### Character Escapes
 
 The backslash \ in a regular expression precedes a literal character. You also escape certain letters that represent common character classes, such as \w for a word character or \s for a space. The following example matches word characters (alphanumeric and underscores) and spaces.
@@ -165,7 +166,6 @@ $ 	    Dollar sign 	                         End of a string
 ( ) 	  Opening and closing parenthesis 	     Group characters
 [ ] 	  Opening and closing square bracket 	   Matches a range of characters
 { } 	  Opening and closing curly brace 	     Matches a specified number of occurrences of the previous
-
 ```
 
 ## Author
