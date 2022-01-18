@@ -83,6 +83,22 @@ x(?<end>yz)     using ?<end> we put a name to the group
 
 ### Bracket Expressions
 
+Bracket Expressions are characters enclosed by a bracket `[]` matching any single character within the brackets. 
+*note*: if the first character within the brackets is a `^` then it signifies any character *not* in the list, and is unspecified whether it matches an encoding error. 
+
+Examples of Bracket Expressions are as follows: 
+* `[]` - matching any single character within the brackets
+* `[]%` - matching the string inside the brackets before the `%`
+* `[^]` - matching any string that has not a letter from within the brackets (negation of expression)
+* Examples:
+```
+[xyz]         matches a string that either has 'x' or 'x y' or 'x z' (same as x|y|z)
+[x-y]         behaves the same as [xyz]
+[u-zU-Z0-9]   a string that represents a single case insensitive hexadecimal digit
+[0-9]%        a string that has a character from 0-9 before a %
+[^a-zA-Z]     a string that does not contain a letter from 'a' to 'z' or from A to Z
+```
+
 ### Character Classes
 
 ### The OR Operator
