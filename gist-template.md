@@ -28,7 +28,42 @@ A Regex can be used from the command line and text editors as well to locate tex
 
 ### Anchors
 
+Anchors are characters contained within the regular expression that enables a user to match strings which may begin or end, or both, certain characters.
+
+Examples of Anchors:
+
+* `^` - matches any string that start with the anterior word
+* `$` - matches a string that end with preceeding word before the character
+
+```
+^Harrison          matches any string starting with `Harrison`
+Pets$          matches any string ending with `Pet`
+^New Pet$   matches exact string
+Oldpet         matches any string that has the exact text `Oldpet` in it
+```
+
 ### Quantifiers
+
+Quantifiers are characters contained within the regular expression that specify how many instances a character, group, or character class must be represented in the input to be matched.
+
+Examples of Quantifiers:
+
+* `*` - matches a string that has the anterior followed by zero or more of the last character
+* `+` - matches a string that has the anterior followed by one or more of the last character
+* `?` - matches a string that has the anterior followed by zero or one of the last character
+* `{}` -  matches a string that has the anterior followed by how ever many the number in the brackets of the last character in the string
+* `()*` - matches a string that has any anterior characters followed by zero or more copies of the string within the brackets
+* Examples:
+```
+xyz*        matches a string that has xy followed by zero or more z
+xyz+        matches a string that has xy followed by one or more z
+xyz?        matches a string that has xy followed by zero or one z
+xyz{3}      matches a string that has xy followed by 3 z
+xyz{3,}     matches a string that has xy followed by 3 or more z
+xyz{3,6}    matches a string that has xy followed by 3 up to 6 z
+x(yz)*      matches a string that has a followed by zero or more copies of the sequence yz
+x(yz){3,6}  matches a string that has a followed by 3 up to 6 copies of the sequence bc
+```
 
 ### Grouping Constructs
 
