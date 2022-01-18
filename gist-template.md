@@ -53,7 +53,6 @@ Examples of Quantifiers:
 * `?` - matches a string that has the anterior followed by zero or one of the last character
 * `{}` -  matches a string that has the anterior followed by how ever many the number in the brackets of the last character in the string
 * `()*` - matches a string that has any anterior characters followed by zero or more copies of the string within the brackets
-* Examples:
 
 ```
 xyz*        matches a string that has xy followed by zero or more z
@@ -74,7 +73,7 @@ Examples of Grouping are as follows:
 * `()` - parentheses creates a capture group
 * `(?:)` - using `?:` disables the capturing group
 * `(?<>)` - using `?<>` puts a name to the group
-* Examples:
+
 ```
 x(yz)           parentheses create a capturing group with value yz
 x(?:yz)*        using ?: we disable the capturing group
@@ -86,11 +85,11 @@ x(?<end>yz)     using ?<end> we put a name to the group
 Bracket Expressions are characters enclosed by a bracket `[]` matching any single character within the brackets. 
 *note*: if the first character within the brackets is a `^` then it signifies any character *not* in the list, and is unspecified whether it matches an encoding error. 
 
-Examples of Bracket Expressions are as follows: 
+Examples of Bracket Expressions: 
 * `[]` - matching any single character within the brackets
 * `[]%` - matching the string inside the brackets before the `%`
 * `[^]` - matching any string that has not a letter from within the brackets (negation of expression)
-* Examples:
+
 ```
 [xyz]         matches a string that either has 'x' or 'x y' or 'x z' (same as x|y|z)
 [x-y]         behaves the same as [xyz]
@@ -100,6 +99,26 @@ Examples of Bracket Expressions are as follows:
 ```
 
 ### Character Classes
+
+Character Classes, or character set, tells the regex engine to match only one out of several specific characters including digits, words, or whitespace
+
+Examples of Character Classes:
+
+* `\d` - matches a single character that is a digit
+* `\w` - matches a word character (any alphanumeric character plus underscore)
+* `\s` - matches a whitespace character (including tabs and line brakes)
+* `.` - matches any character
+* the capital case for any previously mentioned characters will inverse the match
+
+```
+\d    matches a single any digit 0-9
+\w    matches a single any character that is a-z
+\s    matches ` `
+.     matches any character
+\D    matches a single non-digit character
+\W    matches a single any non-character that is a-z
+\S    matches a single non-` `
+```
 
 ### The OR Operator
 
