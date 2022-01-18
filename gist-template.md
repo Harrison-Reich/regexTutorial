@@ -128,10 +128,10 @@ Examples of OR Operators:
 
 * `(|)` - matches a string that has any anterior characters followed by the characters on the left or right of the vertical bar
 * `[]` - matches a string that has any anterior characters without any characters within the brackets
-* Examples: 
+
 ```
-a(b|c)  matches a string that has a followed by b or c (and captures b or c)
-a[bc]   matches a string that has a, but without capturing b or c
+x(y|z)  matches a string that has 'x' followed by 'y' or 'z' (and captures y or z)
+x[yz]   matches a string that has 'x', but without capturing 'y' or 'z'
 ```
 
 ### Flags
